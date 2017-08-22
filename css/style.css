@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #d2dbdb;
+    font-family: 'Ubuntu', sans-serif;
+}
+h1, .create-column {
+    margin-left: 10px;
+}
+h2 {
+    display: inline-block;
+    width: 170px;
+    margin-left: 15px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+li {
+    padding: 5px 10px 10px;
+    margin-top: 15px;
+    background: #8de08d;
+    border: 1px solid #7e967e;
+}
+li:nth-of-type(even) {
+   background: #ff9f7c;
+}
+p {
+    display: inline-block;
+    margin: 10px 10px 15px;
+}
+button:hover {
+    cursor: pointer;
+}
+.column-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+.column {
+    width: 260px;
+    padding: 0 15px 10px;
+    margin: 5px;
+    background: #5ECDCD;
+    background: #99dbdb;
+    border: 1px solid gray;
+}
+.card-placeholder {
+    height: 60px;
+}
+.btn-delete, .add-card,
+.create-column, .card-placeholder,
+ .card-placeholder:nth-of-type(even){
+    background: #c0cece;
+}
+.create-column {
+    padding: 8px;
+    background: #5157ff;
+    color: #fff;
+}

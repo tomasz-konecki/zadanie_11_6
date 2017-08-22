@@ -12,7 +12,7 @@ $(function() {
     };
 
     $('.create-column')
-        .click(function() {
+        .click(() => {
             var name = prompt('Enter a column name');
             var column = new Column(name);
             board.addColumn(column);
@@ -60,8 +60,8 @@ $(function() {
                 self.addCard(new Card(prompt("Enter the name of the card")));
             });
 
-            $column.append($columnTitle)
-                .append($columnDelete)
+            $column.append($columnDelete)
+                .append($columnTitle)
                 .append($columnAddCard)
                 .append($columnCardList);
 
@@ -112,22 +112,24 @@ $(function() {
 
 // -------------------------------------------------------------------------------------------------
 
-// TWORZENIE KOLUMN
-var todoColumn = new Column('To do');
-var doingColumn = new Column('Doing');
-var doneColumn = new Column('Done');
+    // TWORZENIE KOLUMN
+    var todoColumn = new Column('To do');
+    var doingColumn = new Column('Doing');
+    var doneColumn = new Column('Done');
+    
+    // DODAWANIE KOLUMN DO TABLICY
+    board.addColumn(todoColumn);
+    board.addColumn(doingColumn);
+    board.addColumn(doneColumn);
+    
+    // TWORZENIE NOWYCH EGZEMPLARZY KART
+    var card1 = new Card('New task');
+    var card2 = new Card('Create kanban boards');
+    
+    // DODAWANIE KART DO KOLUMN
+    todoColumn.addCard(card1);
+    doingColumn.addCard(card2);
 
-// DODAWANIE KOLUMN DO TABLICY
-board.addColumn(todoColumn);
-board.addColumn(doingColumn);
-board.addColumn(doneColumn);
-
-// TWORZENIE NOWYCH EGZEMPLARZY KART
-var card1 = new Card('New task');
-var card2 = new Card('Create kanban boards');
-
-// DODAWANIE KART DO KOLUMN
-todoColumn.addCard(card1);
-doingColumn.addCard(card2);
+// -------------------------------------------------------------------------------------------------
 
 })
