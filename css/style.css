@@ -30,11 +30,17 @@ li:nth-of-type(even) {
    background: #ff9f7c;
 }
 p {
-    display: inline-block;
-    margin: 10px 10px 15px;
+    margin-top: 0;
 }
 button:hover {
     cursor: pointer;
+}
+h6 {
+    display: inline-block;
+    width: 160px;
+    margin-left: 10px;
+    text-align: right;
+    font-weight: normal;
 }
 .column-container {
     display: flex;
@@ -44,15 +50,14 @@ button:hover {
     padding-bottom: 10px;
 }
 .column {
-    width: 260px;
+    width: 255px;
     padding: 0 15px 10px;
     margin: 5px;
-    background: #5ECDCD;
     background: #99dbdb;
     border: 1px solid gray;
 }
 .card-placeholder {
-    height: 60px;
+    height: 100px;
 }
 .btn-delete, .add-card,
 .create-column, .card-placeholder,
