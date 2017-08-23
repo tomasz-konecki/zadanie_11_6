@@ -47,7 +47,7 @@ $(function() {
 
         this.id = randomString();
         this.name = name;
-        this.element = createColumn();
+        this.element = $(createColumn());
 
         function createColumn() {
             var column = document.createElement('div');
@@ -63,13 +63,12 @@ $(function() {
             var columnAddCard = document.createElement('button');
                 columnAddCard.classList.add('add-card');
                 columnAddCard.innerText = 'Add a card';
-            var columnAll = document.createDocumentFragment();
 
-            columnDelete.addEventListener('click', function() {
+            columnDelete.addEventListener('click', () => {
                 self.removeColumn();
             });
 
-            columnAddCard.addEventListener('click', function() {
+            columnAddCard.addEventListener('click', () => {
                 self.addCard(new Card(prompt("Enter the name of the card")));
             });
 
@@ -77,9 +76,8 @@ $(function() {
             column.appendChild(columnTitle);
             column.appendChild(columnAddCard);
             column.appendChild(columnCardList);
-            columnAll.appendChild(column);
 
-             return columnAll;
+             return column;
         }
     }
 
@@ -100,7 +98,7 @@ $(function() {
     
         this.id = randomString();
         this.description = description;
-        this.element = createCard();
+        this.element = $(createCard());
     
         function createCard() {
             var card = document.createElement('li');
@@ -114,18 +112,16 @@ $(function() {
             var cardDelete = document.createElement('button');
                 cardDelete.classList.add('btn-delete');
                 cardDelete.innerText = 'x';
-            var cardAll = document.createDocumentFragment();
            
-            cardDelete.addEventListener('click', function() {
+            cardDelete.addEventListener('click', () => {
                   self.removeCard();
             });
 
             card.appendChild(cardDelete);
             card.appendChild(cardId);
             card.appendChild(cardDescription);
-            cardAll.appendChild(card);
             
-            return cardAll;
+            return card;
         }
     }
 
