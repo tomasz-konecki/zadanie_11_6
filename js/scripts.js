@@ -99,7 +99,7 @@ $(function() {
         this.id = randomString();
         this.description = description;
         this.element = $(createCard());
-    
+        
         function createCard() {
             var card = document.createElement('li');
                 card.classList.add('card');
@@ -135,15 +135,14 @@ $(function() {
 
     var todoColumn = new Column('To do'),
         doingColumn = new Column('Doing'),
-        doneColumn = new Column('Done');
-    
+        doneColumn = new Column('Done'),
+        card1 = new Card('New task'),
+        card2 = new Card('Create kanban boards');
+
     board.addColumn(todoColumn);
     board.addColumn(doingColumn);
     board.addColumn(doneColumn);
-    
-    var card1 = new Card('New task'),
-        card2 = new Card('Create kanban boards');
-    
+
     todoColumn.addCard(card1);
     doingColumn.addCard(card2);
 
